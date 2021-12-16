@@ -20,7 +20,7 @@ All other balls add points for player. The game loops continuoulsy until the pla
 1. I wanted to move the balls themselves because stationary balls were boring in my opinion, so I used an update() function for the ball (class SwagBall object, btw) to 
    move the ball through the enviroment. I needed to account for the borders of the windo so the ball doesn't go out of bound, which I solved. The issue was that the balls 
    only move towards NE cornder of window. I didn't have enought time to remedy this but POSSIBLE solution:
- ~~~~> Use enum {N,S,E,W} to initialize ball with a compass direction and move ball with respect to direction. When ball collides with border, switch direction and move.
+---> Use enum {N,S,E,W} to initialize ball with a compass direction and move ball with respect to direction. When ball collides with border, switch direction and move.
        For example; if ball direction is N, decrement ball y-coordinate till ball.getPosition().y == 0, then switch direction to S and increment till == window.getSize().x 
        then switch back. Loops so ball's y-coordinate is bouncing around. Use same logic for E and W movements.
        
